@@ -36,6 +36,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           flex: 1,
           padding: isMobile ? "1rem" : "1.5rem 2rem",
           overflowY: "auto",
+          overflowX: "hidden",
         }}>
           {children}
         </main>

@@ -72,27 +72,27 @@ export default function TransactionsPage() {
         gridTemplateColumns: isMobile ? "repeat(2, minmax(0, 1fr))" : "repeat(4, minmax(0, 1fr))",
         gap: isMobile ? "0.5rem" : "1rem",
       }}>
-        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem", minWidth: 0 }}>
-          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Ingresos</p>
-          <p style={{ fontWeight: 700, color: "var(--accent)", fontSize: isMobile ? "1rem" : "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={`+$${totalIncome.toLocaleString("es")}`}>
-            +${totalIncome.toLocaleString("es", { maximumFractionDigits: 2 })}
+        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem" }}>
+          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)" }}>Ingresos</p>
+          <p style={{ fontWeight: 700, color: "var(--accent)", fontSize: isMobile ? "1rem" : "1.2rem" }}>
+            ${totalIncome.toLocaleString("es", { maximumFractionDigits: 0 })}
           </p>
         </div>
-        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem", minWidth: 0 }}>
-          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Gastos</p>
-          <p style={{ fontWeight: 700, color: "var(--danger)", fontSize: isMobile ? "1rem" : "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={`-$${totalExpense.toLocaleString("es")}`}>
-            -${totalExpense.toLocaleString("es", { maximumFractionDigits: 2 })}
+        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem" }}>
+          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)" }}>Gastos</p>
+          <p style={{ fontWeight: 700, color: "var(--danger)", fontSize: isMobile ? "1rem" : "1.2rem" }}>
+            ${totalExpense.toLocaleString("es", { maximumFractionDigits: 0 })}
           </p>
         </div>
-        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem", minWidth: 0 }}>
-          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Balance</p>
-          <p style={{ fontWeight: 700, color: totalIncome - totalExpense >= 0 ? "var(--accent)" : "var(--danger)", fontSize: isMobile ? "1rem" : "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={`$${(totalIncome - totalExpense).toLocaleString("es")}`}>
-            ${(totalIncome - totalExpense).toLocaleString("es", { maximumFractionDigits: 2 })}
+        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem" }}>
+          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)" }}>Balance</p>
+          <p style={{ fontWeight: 700, color: totalIncome - totalExpense >= 0 ? "var(--accent)" : "var(--danger)", fontSize: isMobile ? "1rem" : "1.2rem" }}>
+            ${(totalIncome - totalExpense).toLocaleString("es", { maximumFractionDigits: 0 })}
           </p>
         </div>
-        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem", minWidth: 0 }}>
-          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Transacciones</p>
-          <p style={{ fontWeight: 700, fontSize: isMobile ? "1rem" : "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{filtered.length}</p>
+        <div className="card" style={{ padding: isMobile ? "0.75rem" : "1rem 1.25rem" }}>
+          <p style={{ fontSize: "0.7rem", color: "var(--text-secondary)" }}>Transacciones</p>
+          <p style={{ fontWeight: 700, fontSize: isMobile ? "1rem" : "1.2rem" }}>{filtered.length}</p>
         </div>
       </div>
 
