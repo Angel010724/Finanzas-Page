@@ -21,12 +21,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <Sidebar />
       <div style={{
         flex: 1,
+        minWidth: 0,
         marginLeft: isMobile ? 0 : "var(--sidebar-width)",
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
         background: "var(--bg-primary)",
         transition: "margin-left 0.3s ease",
+        overflow: "hidden",
       }}>
         <Header
           title="Nexo"
