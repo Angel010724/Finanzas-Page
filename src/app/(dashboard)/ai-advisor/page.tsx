@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Sparkles, Loader2, Trash2 } from "lucide-react";
+import { Send, Bot, User, Sparkles, Loader2, Trash2, KeyRound, Settings } from "lucide-react";
 
 interface Message {
   role: "user" | "ai";
@@ -183,6 +183,37 @@ export default function AIAdvisorPage() {
                   {s}
                 </button>
               ))}
+            </div>
+
+            {/* API Key Notice */}
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem",
+              padding: "0.875rem 1rem",
+              background: "rgba(59, 130, 246, 0.1)",
+              border: "1px solid rgba(59, 130, 246, 0.25)",
+              borderRadius: "var(--radius-sm)",
+              maxWidth: 480,
+              width: "100%",
+            }}>
+              <KeyRound size={18} style={{ color: "#3b82f6", flexShrink: 0 }} />
+              <p style={{ fontSize: "0.78rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
+                Para usar Nexo AI, necesitas configurar tu <strong style={{ color: "var(--text-primary)" }}>API Key de Preferencia</strong> en{" "}
+                <a
+                  href="/settings"
+                  style={{
+                    color: "#3b82f6",
+                    textDecoration: "none",
+                    fontWeight: 600,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.2rem",
+                  }}
+                >
+                  <Settings size={12} /> Configuración
+                </a>.
+              </p>
             </div>
           </div>
         ) : (
