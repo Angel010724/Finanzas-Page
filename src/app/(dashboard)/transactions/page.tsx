@@ -65,7 +65,7 @@ export default function TransactionsPage() {
   const handlePrint = () => window.print();
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: isMobile ? "0.75rem" : "1.5rem" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: isMobile ? "0.75rem" : "1.5rem", minWidth: 0 }}>
       {/* Summary bar — 2x2 grid on mobile */}
       <div style={{
         display: "grid",
