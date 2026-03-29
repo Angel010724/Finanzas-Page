@@ -54,7 +54,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: isMobile ? "1rem" : "1.5rem", minWidth: 0 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: isMobile ? "1rem" : "1.5rem" }}>
       {/* Metric Cards — 2x2 grid on mobile, row on desktop */}
       <div style={{
         display: "grid",
@@ -93,7 +93,6 @@ export default function DashboardPage() {
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
         gap: isMobile ? "1rem" : "1rem",
-        minWidth: 0,
       }}>
         <SpendingChart data={data?.monthlyTrend ?? []} />
         <CategoryList data={data?.categoryBreakdown ?? []} />
