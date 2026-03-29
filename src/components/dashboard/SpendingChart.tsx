@@ -44,7 +44,7 @@ export default function SpendingChart({ data }: SpendingChartProps) {
       <h3 style={{ fontSize: isMobile ? "0.9rem" : "1rem", fontWeight: 600, marginBottom: isMobile ? "0.75rem" : "1.25rem" }}>
         Gastos últimos 6 meses
       </h3>
-      <ResponsiveContainer width="100%" height={isMobile ? 180 : 240}>
+      <ResponsiveContainer width="99%" height={isMobile ? 180 : 240}>
         <BarChart data={data} barCategoryGap="30%" barGap={4}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
           <XAxis
